@@ -4,6 +4,7 @@
 ## 二分查找
 https://leetcode.com/problems/search-insert-position/
 
+```c++
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
@@ -29,3 +30,4 @@ public:
         return mid;
     }
 };
+```
