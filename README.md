@@ -31,3 +31,29 @@ public:
     }
 };
 ```
+
+```go
+func searchInsert(nums []int, target int) int {
+    start,end:=0,len(nums)-1
+    if len(nums)==0||nums[start]>target{
+        return 0
+    }
+    if nums[end]<target{
+        return end+1
+    }
+    
+    mid:=(end-start)/2+start
+    for start<=end{
+        if nums[mid]==target{
+            break
+        }else if nums[mid]>target{
+            end=mid-1
+        }else{
+            start=mid+1
+        }
+        mid=(end-start)/2+start
+    }
+    
+    return mid
+}
+```
